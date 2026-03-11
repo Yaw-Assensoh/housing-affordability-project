@@ -1,2 +1,16 @@
 *.DS_Store
 data/raw/
+# Raw data files 
+data/raw/
+
+# Mac system files
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
