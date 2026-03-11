@@ -29,10 +29,12 @@ across major US cities over the past decade?
 - Score = 2.0+ → severely unaffordable
 
 **Key findings:**
-- Los Angeles is the least affordable city consistently since 2017
-- Houston remained below 1.5 throughout — most affordable of the 5
-- All 5 cities saw affordability worsen sharply after 2020
-- Miami showed the steepest rise, nearly doubling its index 2019–2023
+- Los Angeles reached an affordability index of 2.1+ by 2024 — 
+  more than double the affordable threshold
+- Miami showed the sharpest deterioration post-2020, driven by 
+  the COVID-era migration boom into Florida
+- Houston remained below 1.5 throughout — the only city to stay 
+  near the affordable range for the full period
 
 **Tools:** Microsoft Excel — data cleaning, long-format reshaping, 
 VLOOKUP, PivotTables, line charts
