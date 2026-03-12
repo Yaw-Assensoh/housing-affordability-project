@@ -64,4 +64,3 @@ investors, policymakers, and residents planning a move.
 - Subqueries and JOINs for multi-year comparisons
 - CASE WHEN for dynamic risk classification
 - DISTINCT ON for first-occurrence detection
-- \COPY for exporting results to CSV
