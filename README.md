@@ -72,3 +72,25 @@ home prices and identify key economic drivers.
 | Median Household Income | FRED | Phase 1, 3 |
 | Realtor.com Inventory | Realtor.com | Phase 2 |
 ```
+
+
+
+##  Phase 2 — SQL Market Intelligence
+
+**Core question:** Which markets show the most risk and how has 
+affordability changed year over year?
+
+**Key findings:**
+- 🔴 Los Angeles is the only HIGH RISK market — avg index 1.745, 
+  peaked at 2.279 in 2022
+- 🟡 New York is MODERATE RISK — crossed 1.5 in 2022 
+  and hasn't recovered
+- 📈 Miami shows the fastest deterioration — index nearly 
+  doubled 2015–2024 despite LOW RISK average rating
+- 🟢 Houston & Chicago remain LOW RISK throughout — 
+  never crossed 1.0
+
+**SQL concepts used:** GROUP BY, AVG, ROUND, RANK, 
+LAG (window functions), CASE WHEN, UNION ALL, subqueries
+
+**Tools:** PostgreSQL 14, pgAdmin 4
