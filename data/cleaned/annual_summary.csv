@@ -1,0 +1,51 @@
+city,year,avg_home_value,avg_monthly_rent,median_income,affordability_index,status
+"Chicago, IL",2015,195192.58,1376.25,72790,0.54,🟢 Affordable
+"Chicago, IL",2016,205404.58,1416.42,75380,0.54,🟢 Affordable
+"Chicago, IL",2017,216090.83,1452.83,76710,0.56,🟢 Affordable
+"Chicago, IL",2018,226365.0,1488.17,77700,0.58,🟢 Affordable
+"Chicago, IL",2019,231981.75,1530.5,83260,0.56,🟢 Affordable
+"Chicago, IL",2020,238517.0,1541.67,81580,0.58,🟢 Affordable
+"Chicago, IL",2021,263613.5,1590.5,81270,0.65,🟢 Affordable
+"Chicago, IL",2022,287107.83,1742.67,79500,0.72,🟢 Affordable
+"Chicago, IL",2023,295400.0,1852.5,82690,0.71,🟢 Affordable
+"Chicago, IL",2024,313471.5,1948.0,83730,0.75,🟢 Affordable
+"Houston, TX",2015,184985.92,1213.67,72790,0.51,🟢 Affordable
+"Houston, TX",2016,196451.83,1223.58,75380,0.52,🟢 Affordable
+"Houston, TX",2017,203709.75,1241.83,76710,0.53,🟢 Affordable
+"Houston, TX",2018,212035.83,1287.42,77700,0.55,🟢 Affordable
+"Houston, TX",2019,220414.83,1309.58,83260,0.53,🟢 Affordable
+"Houston, TX",2020,229056.75,1327.83,81580,0.56,🟢 Affordable
+"Houston, TX",2021,258647.83,1413.92,81270,0.64,🟢 Affordable
+"Houston, TX",2022,303082.42,1536.17,79500,0.76,🟢 Affordable
+"Houston, TX",2023,306678.92,1580.5,82690,0.74,🟢 Affordable
+"Houston, TX",2024,309058.25,1608.25,83730,0.74,🟢 Affordable
+"Los Angeles, CA",2015,501425.17,1812.58,72790,1.38,🟡 Moderate
+"Los Angeles, CA",2016,520565.25,1924.75,75380,1.38,🟡 Moderate
+"Los Angeles, CA",2017,566811.17,2038.5,76710,1.48,🟡 Moderate
+"Los Angeles, CA",2018,626066.08,2135.75,77700,1.61,🔴 Unaffordable
+"Los Angeles, CA",2019,641637.92,2221.83,83260,1.54,🔴 Unaffordable
+"Los Angeles, CA",2020,674771.83,2246.42,81580,1.65,🔴 Unaffordable
+"Los Angeles, CA",2021,768652.42,2379.5,81270,1.89,🔴 Unaffordable
+"Los Angeles, CA",2022,871990.58,2658.25,79500,2.19,🔴 Unaffordable
+"Los Angeles, CA",2023,870801.0,2738.83,82690,2.11,🔴 Unaffordable
+"Los Angeles, CA",2024,929241.17,2802.83,83730,2.22,🔴 Unaffordable
+"Miami, FL",2015,222469.5,1500.58,72790,0.61,🟢 Affordable
+"Miami, FL",2016,243630.17,1555.0,75380,0.65,🟢 Affordable
+"Miami, FL",2017,262871.0,1595.08,76710,0.69,🟢 Affordable
+"Miami, FL",2018,281643.42,1642.92,77700,0.72,🟢 Affordable
+"Miami, FL",2019,294005.92,1690.5,83260,0.71,🟢 Affordable
+"Miami, FL",2020,308770.25,1733.08,81580,0.76,🟢 Affordable
+"Miami, FL",2021,351433.0,2018.9,81270,0.86,🟢 Affordable
+"Miami, FL",2022,430975.75,2470.33,79500,1.08,🟡 Moderate
+"Miami, FL",2023,465174.5,2567.75,82690,1.13,🟡 Moderate
+"Miami, FL",2024,489833.08,2613.33,83730,1.17,🟡 Moderate
+"New York, NY",2015,413900.0,2215.75,72790,1.14,🟡 Moderate
+"New York, NY",2016,432645.08,2271.25,75380,1.15,🟡 Moderate
+"New York, NY",2017,454325.5,2312.33,76710,1.18,🟡 Moderate
+"New York, NY",2018,476553.92,2356.75,77700,1.23,🟡 Moderate
+"New York, NY",2019,493064.33,2428.5,83260,1.18,🟡 Moderate
+"New York, NY",2020,509842.5,2379.7,81580,1.25,🟡 Moderate
+"New York, NY",2021,557771.0,2410.92,81270,1.37,🟡 Moderate
+"New York, NY",2022,604323.92,2809.17,79500,1.52,🔴 Unaffordable
+"New York, NY",2023,618056.67,2957.67,82690,1.49,🟡 Moderate
+"New York, NY",2024,659670.58,3073.5,83730,1.58,🔴 Unaffordable
