@@ -1,0 +1,6 @@
+city,best_ever,worst_ever,total_deterioration,avg_index,risk_level
+"Los Angeles, CA",1.311,2.279,0.968,1.745,HIGH RISK
+"New York, NY",1.120,1.620,0.500,1.309,MODERATE RISK
+"Miami, FL",0.585,1.176,0.591,0.838,LOW RISK
+"Chicago, IL",0.526,0.765,0.239,0.620,LOW RISK
+"Houston, TX",0.487,0.786,0.299,0.608,LOW RISK

@@ -77,20 +77,25 @@ home prices and identify key economic drivers.
 
 ##  Phase 2 — SQL Market Intelligence
 
-**Core question:** Which markets show the most risk and how has 
+**Core question:** Which markets show the most risk and how has
 affordability changed year over year?
 
 **Key findings:**
-- 🔴 Los Angeles is the only HIGH RISK market — avg index 1.745, 
-  peaked at 2.279 in 2022
-- 🟡 New York is MODERATE RISK — crossed 1.5 in 2022 
-  and hasn't recovered
-- 📈 Miami shows the fastest deterioration — index nearly 
-  doubled 2015–2024 despite LOW RISK average rating
-- 🟢 Houston & Chicago remain LOW RISK throughout — 
-  never crossed 1.0
+- 🔴 Los Angeles is the only HIGH RISK market — avg index 1.745,
+  peaked at 2.279 in 2022. Rent consumes 40% of median income.
+- 🟡 New York is MODERATE RISK — rent hit 44% of income in 2024,
+  the highest of all 5 cities
+- 📈 Miami had the fastest home value growth at 120% since 2015,
+  crossing the affordability threshold for the first time in 2022
+- 🟢 Houston is the most resilient — lowest growth rate (67%),
+  rent stayed near 23% of income throughout
+- 📉 2021–2022 were the worst years across all cities —
+  LA deteriorated 0.302 index points in a single year
 
-**SQL concepts used:** GROUP BY, AVG, ROUND, RANK, 
-LAG (window functions), CASE WHEN, UNION ALL, subqueries
+**SQL concepts used:** GROUP BY, AVG, ROUND, RANK, LAG,
+CASE WHEN, UNION ALL, subqueries, JOINS, DISTINCT ON,
+window functions (PARTITION BY, FIRST_VALUE)
 
 **Tools:** PostgreSQL 14, pgAdmin 4
+
+**Query files:** [`sql/03_analysis_queries.sql`](sql/03_analysis_queries.sql)
