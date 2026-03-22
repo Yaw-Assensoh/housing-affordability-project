@@ -1,4 +1,4 @@
-# 📓 Phase 3 Observations, Python Analysis
+#  Phase 3 Observations, Python Analysis
 ## Housing Affordability Analysis (2015–2024)
 **Author:** Yaw Assensoh Opoku
 **Date:** 2026
