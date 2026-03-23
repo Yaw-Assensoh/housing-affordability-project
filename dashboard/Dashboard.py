@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import os
 
 st.set_page_config(
     page_title="Housing Affordability Analysis",
@@ -119,10 +120,13 @@ CITY_COLORS = {
 
 @st.cache_data
 def load_data():
-    cities_long    = pd.read_csv('../data/cleaned/cities_long.csv')
-    annual_summary = pd.read_csv('../data/cleaned/annual_summary.csv')
-    clustering     = pd.read_csv('../data/cleaned/clustering_results.csv')
-    forecasts      = pd.read_csv('../data/cleaned/forecasts_2025_2027.csv')
+    # Get the absolute path to the project root
+    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    
+    cities_long    = pd.read_csv(os.path.join(base, 'data/cleaned/cities_long.csv'))
+    annual_summary = pd.read_csv(os.path.join(base, 'data/cleaned/annual_summary.csv'))
+    clustering     = pd.read_csv(os.path.join(base, 'data/cleaned/clustering_results.csv'))
+    forecasts      = pd.read_csv(os.path.join(base, 'data/cleaned/forecasts_2025_2027.csv'))
     cities_long['date'] = pd.to_datetime(cities_long['date'])
     forecasts['date']   = pd.to_datetime(forecasts['date'])
     annual_summary.columns = (
@@ -152,7 +156,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown('<p style="color:#AAAAAA!important; font-size:0.85rem;"><b style="color:white!important;">🛠️ Tools Used:</b><br>Excel · PostgreSQL · Python<br>Scikit-learn · Statsmodels<br>Plotly · Folium · Streamlit</p>', unsafe_allow_html=True)
     st.markdown("---")
-    st.markdown('<p style="color:#888888!important; font-size:0.75rem;"> Data Sources:<br>Zillow Research & FRED</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#888888!important; font-size:0.75rem;">📊 Data Sources:<br>Zillow Research & FRED</p>', unsafe_allow_html=True)
 
 # ── Header (LIGHTENED VERSION) ─────────────────────────────────
 st.markdown("""
