@@ -90,6 +90,72 @@ st.markdown("""
         color: #1A1A2E !important;
     }
     
+    /* Fix for Plotly modebar (toolbar icons) */
+    .modebar {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    }
+    .modebar .icon {
+        fill: #1A1A2E !important;
+        stroke: #1A1A2E !important;
+    }
+    .modebar .icon:hover {
+        fill: #2D87F0 !important;
+        stroke: #2D87F0 !important;
+    }
+    
+    /* Fix for hover tooltips */
+    .hovertext text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+        font-weight: 500 !important;
+    }
+    .hoverlayer .hovertext {
+        background-color: white !important;
+        border: 1px solid #DDDDDD !important;
+        border-radius: 6px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    }
+    .hoverlayer .hovertext text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+    }
+    .hoverlayer .hovertext path {
+        fill: white !important;
+        stroke: #DDDDDD !important;
+    }
+    
+    /* Fix for selection boxes and range sliders */
+    .selection-box {
+        stroke: #2D87F0 !important;
+        fill: rgba(45, 135, 240, 0.1) !important;
+    }
+    .graticule {
+        stroke: #EEEEEE !important;
+    }
+    .slider-handle {
+        fill: #2D87F0 !important;
+        stroke: #2D87F0 !important;
+    }
+    .slider-track {
+        stroke: #CCCCCC !important;
+    }
+    .slider-track-inset {
+        stroke: #2D87F0 !important;
+    }
+    
+    /* Fix for annotation arrows */
+    .annotation-arrow {
+        fill: #1A1A2E !important;
+        stroke: #1A1A2E !important;
+    }
+    .annotation-text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+        font-weight: 500 !important;
+    }
+    
     .stTabs [data-baseweb="tab"] { color: #444444 !important; font-weight: 600 !important; }
     .section-desc { color: #555555 !important; font-size: 0.93rem !important;
                     margin-bottom: 16px !important; line-height: 1.65 !important; }

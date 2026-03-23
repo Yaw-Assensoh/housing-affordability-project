@@ -22,6 +22,24 @@ st.markdown("""
     .stAlert > div { color: #1A1A2E !important; font-size: 0.93rem !important; line-height: 1.65 !important; }
     .stRadio label { color: #1A1A2E !important; font-weight: 600 !important; }
     
+    /* Fix for selectbox dropdown and input */
+    .stSelectbox [data-baseweb="select"] {
+        background-color: white !important;
+        border: 1px solid #D0D5DD !important;
+        border-radius: 8px !important;
+    }
+    .stSelectbox [data-baseweb="select"] div {
+        color: #1A1A2E !important;
+        background-color: white !important;
+    }
+    .stSelectbox svg {
+        fill: #1A1A2E !important;
+    }
+    div[data-baseweb="popover"] div {
+        background-color: white !important;
+        color: #1A1A2E !important;
+    }
+    
     /* Fix for Plotly chart text visibility */
     .js-plotly-plot .main-svg text,
     .plotly .main-svg text,
@@ -67,6 +85,72 @@ st.markdown("""
     .hoverlayer text {
         fill: #1A1A2E !important;
         color: #1A1A2E !important;
+    }
+    
+    /* Fix for Plotly modebar (toolbar icons) */
+    .modebar {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    }
+    .modebar .icon {
+        fill: #1A1A2E !important;
+        stroke: #1A1A2E !important;
+    }
+    .modebar .icon:hover {
+        fill: #2D87F0 !important;
+        stroke: #2D87F0 !important;
+    }
+    
+    /* Fix for hover tooltips */
+    .hovertext text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+        font-weight: 500 !important;
+    }
+    .hoverlayer .hovertext {
+        background-color: white !important;
+        border: 1px solid #DDDDDD !important;
+        border-radius: 6px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    }
+    .hoverlayer .hovertext text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+    }
+    .hoverlayer .hovertext path {
+        fill: white !important;
+        stroke: #DDDDDD !important;
+    }
+    
+    /* Fix for selection boxes and range sliders */
+    .selection-box {
+        stroke: #2D87F0 !important;
+        fill: rgba(45, 135, 240, 0.1) !important;
+    }
+    .graticule {
+        stroke: #EEEEEE !important;
+    }
+    .slider-handle {
+        fill: #2D87F0 !important;
+        stroke: #2D87F0 !important;
+    }
+    .slider-track {
+        stroke: #CCCCCC !important;
+    }
+    .slider-track-inset {
+        stroke: #2D87F0 !important;
+    }
+    
+    /* Fix for annotation arrows */
+    .annotation-arrow {
+        fill: #1A1A2E !important;
+        stroke: #1A1A2E !important;
+    }
+    .annotation-text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+        font-weight: 500 !important;
     }
     
     .section-desc { color: #555555 !important; font-size: 0.93rem !important;

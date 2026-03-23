@@ -107,6 +107,150 @@ st.markdown("""
         font-size: 0.92rem !important;
         line-height: 1.6 !important;
     }
+    
+    /* Fix for Plotly chart text visibility */
+    .js-plotly-plot .main-svg text,
+    .plotly .main-svg text,
+    .plotly text,
+    .gtitle,
+    .xtitle,
+    .ytitle,
+    .legendtext,
+    .hovertext text,
+    .annotation-text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+    }
+    
+    /* Fix for axis tick labels */
+    .xtick text, .ytick text {
+        fill: #333333 !important;
+        color: #333333 !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Fix for legend text */
+    .legend text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Fix for chart titles */
+    .gtitle {
+        fill: #1A1A2E !important;
+        font-weight: 700 !important;
+        font-size: 16px !important;
+    }
+    
+    /* Fix for axis titles */
+    .xtitle, .ytitle {
+        fill: #1A1A2E !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Fix for hover labels */
+    .hoverlayer text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+    }
+    
+    /* Fix for Plotly modebar (toolbar icons) */
+    .modebar {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    }
+    .modebar .icon {
+        fill: #1A1A2E !important;
+        stroke: #1A1A2E !important;
+    }
+    .modebar .icon:hover {
+        fill: #2D87F0 !important;
+        stroke: #2D87F0 !important;
+    }
+    
+    /* Fix for hover tooltips */
+    .hovertext text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+        font-weight: 500 !important;
+    }
+    .hoverlayer .hovertext {
+        background-color: white !important;
+        border: 1px solid #DDDDDD !important;
+        border-radius: 6px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    }
+    .hoverlayer .hovertext text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+    }
+    .hoverlayer .hovertext path {
+        fill: white !important;
+        stroke: #DDDDDD !important;
+    }
+    
+    /* Fix for selection boxes and range sliders */
+    .selection-box {
+        stroke: #2D87F0 !important;
+        fill: rgba(45, 135, 240, 0.1) !important;
+    }
+    .graticule {
+        stroke: #EEEEEE !important;
+    }
+    .slider-handle {
+        fill: #2D87F0 !important;
+        stroke: #2D87F0 !important;
+    }
+    .slider-track {
+        stroke: #CCCCCC !important;
+    }
+    .slider-track-inset {
+        stroke: #2D87F0 !important;
+    }
+    
+    /* Fix for annotation arrows */
+    .annotation-arrow {
+        fill: #1A1A2E !important;
+        stroke: #1A1A2E !important;
+    }
+    .annotation-text {
+        fill: #1A1A2E !important;
+        color: #1A1A2E !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Executive Summary Cards */
+    .summary-card {
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        border-left: 4px solid;
+        margin-bottom: 15px;
+        transition: transform 0.2s;
+    }
+    .summary-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .summary-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .summary-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #555555 !important;
+    }
+    .kpi-highlight {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #2D87F0 !important;
+        margin: 5px 0;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -121,14 +265,17 @@ CITY_COLORS = {
 @st.cache_data
 def load_data():
     # Get the absolute path to the project root
-    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    current_file = os.path.abspath(__file__)
+    dashboard_folder = os.path.dirname(current_file)
+    project_root = os.path.dirname(dashboard_folder)
     
-    cities_long    = pd.read_csv(os.path.join(base, 'data/cleaned/cities_long.csv'))
-    annual_summary = pd.read_csv(os.path.join(base, 'data/cleaned/annual_summary.csv'))
-    clustering     = pd.read_csv(os.path.join(base, 'data/cleaned/clustering_results.csv'))
-    forecasts      = pd.read_csv(os.path.join(base, 'data/cleaned/forecasts_2025_2027.csv'))
+    cities_long = pd.read_csv(os.path.join(project_root, 'data', 'cleaned', 'cities_long.csv'))
+    annual_summary = pd.read_csv(os.path.join(project_root, 'data', 'cleaned', 'annual_summary.csv'))
+    clustering = pd.read_csv(os.path.join(project_root, 'data', 'cleaned', 'clustering_results.csv'))
+    forecasts = pd.read_csv(os.path.join(project_root, 'data', 'cleaned', 'forecasts_2025_2027.csv'))
+    
     cities_long['date'] = pd.to_datetime(cities_long['date'])
-    forecasts['date']   = pd.to_datetime(forecasts['date'])
+    forecasts['date'] = pd.to_datetime(forecasts['date'])
     annual_summary.columns = (
         annual_summary.columns.str.strip().str.lower()
         .str.replace(r'[^a-z0-9_]', '_', regex=True)
@@ -145,7 +292,7 @@ with st.sidebar:
         <h2 style="color:white !important; margin:8px 0 4px 0;
                    font-size:1.3rem;">Housing Analysis</h2>
         <p style="color:#AAAAAA !important; font-size:0.8rem; margin:0;">
-            Data Analytics Portfolio
+            Data Analytics Portfolio Project
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -157,8 +304,10 @@ with st.sidebar:
     st.markdown('<p style="color:#AAAAAA!important; font-size:0.85rem;"><b style="color:white!important;">🛠️ Tools Used:</b><br>Excel · PostgreSQL · Python<br>Scikit-learn · Statsmodels<br>Plotly · Folium · Streamlit</p>', unsafe_allow_html=True)
     st.markdown("---")
     st.markdown('<p style="color:#888888!important; font-size:0.75rem;">📊 Data Sources:<br>Zillow Research & FRED</p>', unsafe_allow_html=True)
+    st.markdown("---")
+    st.markdown('<p style="color:#888888!important; font-size:0.75rem;">📁 <b>Navigation:</b><br>Use the tabs above to explore:<br>📊 EDA · 🔵 Clustering · 📈 Time Series<br>📐 Regression · 🗺️ Geospatial</p>', unsafe_allow_html=True)
 
-# ── Header (LIGHTENED VERSION) ─────────────────────────────────
+# ── HEADER (First) ────────────────────────────────────────────
 st.markdown("""
 <div style='background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
             padding:40px; border-radius:14px; margin-bottom:28px;
@@ -200,11 +349,104 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+# ── EXECUTIVE SUMMARY SECTION ─────────────────────────────────
+st.markdown("## 📋 Executive Summary")
+
+# Get latest data for summary
+latest = annual_summary[annual_summary['year'] == 2024]
+la_ai = latest[latest['city'] == 'Los Angeles, CA']['affordability_index'].values[0]
+ny_ai = latest[latest['city'] == 'New York, NY']['affordability_index'].values[0]
+miami_ai = latest[latest['city'] == 'Miami, FL']['affordability_index'].values[0]
+chicago_ai = latest[latest['city'] == 'Chicago, IL']['affordability_index'].values[0]
+houston_ai = latest[latest['city'] == 'Houston, TX']['affordability_index'].values[0]
+
+# Summary cards row
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown(f"""
+    <div class="summary-card" style="border-left-color: #DC3545;">
+        <div class="summary-title">🔴 The Crisis</div>
+        <div class="summary-text">
+            Los Angeles and New York have been unaffordable since before 2015. 
+            LA's affordability index hit <b>{la_ai:.2f}</b> in 2024 — a household needs 
+            <b>$200K+ annual income</b> to afford a median home.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown(f"""
+    <div class="summary-card" style="border-left-color: #28A745;">
+        <div class="summary-title">🟢 The Outliers</div>
+        <div class="summary-text">
+            Chicago ({chicago_ai:.2f}) and Houston ({houston_ai:.2f}) remained <b>affordable</b> throughout 
+            the entire 10-year period. Proving major metros CAN stay affordable 
+            with the right land use policies.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col3:
+    st.markdown(f"""
+    <div class="summary-card" style="border-left-color: #FF6B35;">
+        <div class="summary-title">🟡 The Transition</div>
+        <div class="summary-text">
+            Miami crossed the affordability threshold in 2022 (now {miami_ai:.2f}) 
+            and is the <b>fastest deteriorating</b> market in the dataset. 
+            A cautionary tale of post-COVID migration pressure.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.markdown("---")
+
+# ── KEY TAKEAWAYS SECTION ────────────────────────────────────
+st.markdown("## 💡 Key Takeaways")
+
+takeaways = st.columns(4)
+
+with takeaways[0]:
+    st.markdown("""
+    <div style="text-align:center; padding:15px; background:#F8F9FA; border-radius:10px;">
+        <div style="font-size:2rem;">📈</div>
+        <div style="font-size:1.3rem; font-weight:800; color:#2D87F0;">+$400K</div>
+        <div style="font-size:0.85rem;">LA home values grew $400K while incomes grew only $11K</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with takeaways[1]:
+    st.markdown("""
+    <div style="text-align:center; padding:15px; background:#F8F9FA; border-radius:10px;">
+        <div style="font-size:2rem;">🎯</div>
+        <div style="font-size:1.3rem; font-weight:800; color:#2D87F0;">3 Clusters</div>
+        <div style="font-size:0.85rem;">K-Means confirmed 3 distinct market segments matching SQL risk classifications</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with takeaways[2]:
+    st.markdown("""
+    <div style="text-align:center; padding:15px; background:#F8F9FA; border-radius:10px;">
+        <div style="font-size:2rem;">🔮</div>
+        <div style="font-size:1.3rem; font-weight:800; color:#2D87F0;">$990K</div>
+        <div style="font-size:0.85rem;">LA home values projected to approach $1M by 2027</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with takeaways[3]:
+    st.markdown("""
+    <div style="text-align:center; padding:15px; background:#F8F9FA; border-radius:10px;">
+        <div style="font-size:2rem;">🏗️</div>
+        <div style="font-size:1.3rem; font-weight:800; color:#2D87F0;">Supply</div>
+        <div style="font-size:0.85rem;">Regression confirms: you cannot solve a supply problem with demand-side subsidies</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.markdown("---")
+
 # ── KPI Cards ─────────────────────────────────────────────────
 st.markdown("### 📊 2024 Market Snapshot")
 st.markdown('<p style="color:#555555; font-size:0.92rem; margin-bottom:15px;">The affordability index measures home price relative to income. A score of 1.0 is the threshold — anything above means housing costs more than a household earning the median income can comfortably afford.</p>', unsafe_allow_html=True)
-
-latest = annual_summary[annual_summary['year'] == 2024]
 
 city_order = [
     ('Los Angeles, CA', '🔴'),
