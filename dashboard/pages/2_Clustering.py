@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import os
 
 st.set_page_config(
     page_title="Clustering — Housing Analysis",
@@ -111,7 +112,7 @@ def load_data():
     cities_long = pd.read_csv(os.path.join(base, 'data/cleaned/cities_long.csv'))
     clustering  = pd.read_csv(os.path.join(base, 'data/cleaned/clustering_results.csv'))
     cities_long['date'] = pd.to_datetime(cities_long['date'])
-    forecasting['date']   = pd.to_datetime(forecasting['date'])
+    forecasting['date']   = pd.to_datetime(forecasting['date']) # type: ignore
     return cities_long, clustering
 
 cities_long, clustering = load_data()
