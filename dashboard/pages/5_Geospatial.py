@@ -93,7 +93,7 @@ CITY_COORDS = {
 
 @st.cache_data
 def load_data():
-    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     annual  = pd.read_csv(os.path.join(base, 'data/cleaned/annual_summary.csv'))
     cluster = pd.read_csv(os.path.join(base, 'data/cleaned/clustering_results.csv'))
     annual.columns = (annual.columns.str.strip().str.lower()

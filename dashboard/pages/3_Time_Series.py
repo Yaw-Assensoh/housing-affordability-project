@@ -105,7 +105,7 @@ CITY_COLORS = {
 
 @st.cache_data
 def load_data():
-    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     cities_long   = pd.read_csv(os.path.join(base, 'data/cleaned/cities_long.csv'))
     forecasts     = pd.read_csv(os.path.join(base, 'data/cleaned/forecasts_2025_2027.csv'))
     model_summary = pd.read_csv(os.path.join(base, 'data/cleaned/arima_model_summary.csv'))

@@ -98,7 +98,7 @@ st.markdown("""
 
 @st.cache_data
 def load_data():
-    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     predictions = pd.read_csv(os.path.join(base, 'data/cleaned/regression_predictions.csv'))
     importance  = pd.read_csv(os.path.join(base, 'data/cleaned/regression_feature_importance.csv'))
     scenarios   = pd.read_csv(os.path.join(base, 'data/cleaned/regression_scenarios.csv'))
