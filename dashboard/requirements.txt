@@ -3,3 +3,5 @@ pandas
 plotly
 folium
 numpy
+scikit-learn
+statsmodels

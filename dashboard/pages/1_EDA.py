@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import os
 
 st.set_page_config(
     page_title="EDA — Housing Analysis",
@@ -107,7 +108,8 @@ CITY_COLORS = {
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv('../data/cleaned/cities_long.csv')
+    base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    df = pd.read_csv(os.path.join(base, 'data/cleaned/cities_long.csv'))
     df['date'] = pd.to_datetime(df['date'])
     return df
 
