@@ -108,9 +108,11 @@ CLUSTER_COLORS = {
 
 @st.cache_data
 def load_data():
+    # Get the absolute path to the project root
     base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    
     cities_long = pd.read_csv(os.path.join(base, 'data/cleaned/cities_long.csv'))
-    clustering  = pd.read_csv(os.path.join(base, 'data/cleaned/clustering_results.csv'))
+    clustering = pd.read_csv(os.path.join(base, 'data/cleaned/clustering_results.csv'))
     cities_long['date'] = pd.to_datetime(cities_long['date'])
     return cities_long, clustering
 
