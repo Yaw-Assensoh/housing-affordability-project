@@ -112,7 +112,7 @@ def load_data():
     cities_long = pd.read_csv(os.path.join(base, 'data/cleaned/cities_long.csv'))
     clustering  = pd.read_csv(os.path.join(base, 'data/cleaned/clustering_results.csv'))
     cities_long['date'] = pd.to_datetime(cities_long['date'])
-    forecasting['date']   = pd.to_datetime(forecasting['date']) # type: ignore
+    clustering['date'] = pd.to_datetime(clustering['date'])
     return cities_long, clustering
 
 cities_long, clustering = load_data()
