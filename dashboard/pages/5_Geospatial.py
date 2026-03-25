@@ -255,9 +255,9 @@ with st.sidebar:
         "Interactive Folium Map": "Click any city marker for a full data popup.",
         "Time Animation":       "Press Play to watch affordability deteriorate year by year from 2015 to 2024."
     }
-    st.markdown(f"**💡 {map_descriptions[map_type]}**")
+    st.markdown(f"** {map_descriptions[map_type]}**")
 
-st.markdown(f"### 🗺️ {map_type}")
+st.markdown(f"###  {map_type}")
 st.markdown("""
 <p class="section-desc">
 Geography tells a story that tables and charts cannot.
