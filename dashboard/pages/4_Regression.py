@@ -7,7 +7,7 @@ import os
 
 st.set_page_config(
     page_title="Regression — Housing Analysis",
-    page_icon="📐",
+    page_icon="",
     layout="wide"
 )
 
@@ -180,7 +180,7 @@ st.markdown("""
             border: 1px solid #E0E0E0;'>
     <p style='color:#1A1A2E!important; font-size:1.8rem; margin:0;
               font-weight:700; line-height:1.2;'>
-        📐 Regression Analysis
+         Regression Analysis
     </p>
     <p style='color:#4A4A5A!important; font-size:0.95rem;
               margin:10px 0 0 0; line-height:1.5;'>
@@ -195,7 +195,7 @@ st.markdown("""
 st.markdown("""
 <div class="card" style="margin-bottom:24px; border-left:5px solid #2980B9;">
     <h4 style="color:#2980B9!important; margin:0 0 8px 0;">
-        📖 What Is Multiple Linear Regression?
+         What Is Multiple Linear Regression?
     </h4>
     <p style="color:#333333!important; margin:0; font-size:0.92rem; line-height:1.7;">
         Regression models the relationship between a target variable
@@ -247,7 +247,7 @@ c4.metric("MAPE",
 st.markdown("---")
 
 # Feature importance
-st.markdown("### 🏆 Feature Importance — What Drives Home Values?")
+st.markdown("###  Feature Importance — What Drives Home Values?")
 st.markdown("""
 <p class="section-desc">
 Green bars show features that increase home values.
@@ -291,7 +291,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown("---")
 
 # Actual vs Predicted
-st.markdown("### 🎯 Actual vs Predicted Home Values")
+st.markdown("###  Actual vs Predicted Home Values")
 st.markdown("""
 <p class="section-desc">
 Each dot is one observation from the test set — 20% of the data
@@ -335,7 +335,7 @@ st.plotly_chart(fig2, use_container_width=True)
 st.markdown("---")
 
 # Scenario analysis
-st.markdown("### 🔮 Scenario Analysis — Los Angeles 2024")
+st.markdown("###  Scenario Analysis — Los Angeles 2024")
 st.markdown("""
 <p class="section-desc">
 What would happen to predicted home values in Los Angeles
@@ -375,7 +375,7 @@ st.plotly_chart(fig3, use_container_width=True)
 st.markdown("---")
 
 # Findings
-st.markdown("### 💡 Key Regression Findings")
+st.markdown("###  Key Regression Findings")
 top_feat = imp.iloc[imp['coefficient'].abs().argmax()]['feature']
 reg_findings = [
     ("#2980B9", f"🏆 Top Predictor: {top_feat.replace('_',' ').title()}",

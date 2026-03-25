@@ -228,7 +228,7 @@ st.markdown("""
             border: 1px solid #E0E0E0;'>
     <p style='color:#1A1A2E!important; font-size:1.8rem; margin:0;
               font-weight:700; line-height:1.2;'>
-        🗺️ Geospatial Analysis
+         Geospatial Analysis
     </p>
     <p style='color:#4A4A5A!important; font-size:0.95rem;
               margin:10px 0 0 0; line-height:1.5;'>
@@ -240,7 +240,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.markdown("### 🗺️ Map Options")
+    st.markdown("###  Map Options")
     map_type = st.radio(
         "Select Map Type",
         ["Choropleth Map",
@@ -338,7 +338,7 @@ elif map_type == "Time Animation":
 st.markdown("---")
 
 # City metrics table
-st.markdown("### 📊 City Metrics Summary (2024)")
+st.markdown("###  City Metrics Summary (2024)")
 st.markdown('<p class="section-desc">All key metrics for 2024, sorted from most to least unaffordable. Combines home values from Phase 1, risk classification from Phase 2, and cluster assignment from Phase 3.</p>', unsafe_allow_html=True)
 
 display = geo_df[['city_short','home_value','rent',
@@ -359,7 +359,7 @@ st.dataframe(
 st.markdown("---")
 
 # Findings
-st.markdown("### 💡 Key Geospatial Findings")
+st.markdown("###  Key Geospatial Findings")
 geo_findings = [
     ("#DC3545", "🔴 The Crisis Is Geographically Concentrated on the Coasts",
      "Los Angeles and New York are both coastal cities with severe land constraints and restrictive zoning laws. Their affordability crisis is not primarily an income problem — it is a geography and policy problem. The maps make this visible instantly in a way that tables cannot."),

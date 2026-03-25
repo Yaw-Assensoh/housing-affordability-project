@@ -218,7 +218,7 @@ filtered = cities_long[
 ]
 
 # KPIs
-st.markdown("### 📋 Dataset Overview")
+st.markdown("### Dataset Overview")
 st.markdown('<p class="section-desc">A summary of the currently filtered data. Adjust the sidebar filters to focus on specific cities or time periods.</p>', unsafe_allow_html=True)
 
 c1, c2, c3, c4 = st.columns(4)
@@ -306,7 +306,7 @@ with tab2:
 st.markdown("---")
 
 # Distribution
-st.markdown("### 📊 Distribution Analysis")
+st.markdown("### Distribution Analysis")
 st.markdown("""
 <p class="section-desc">
 A histogram shows how values are spread across all 10 years for
@@ -375,7 +375,7 @@ st.plotly_chart(fig4, use_container_width=True)
 st.markdown("---")
 
 # Key findings
-st.markdown("### 💡 Key EDA Findings")
+st.markdown("###  Key EDA Findings")
 st.markdown('<p class="section-desc">The four most important conclusions from the exploratory analysis — each one supported directly by the charts above.</p>', unsafe_allow_html=True)
 
 findings_eda = [

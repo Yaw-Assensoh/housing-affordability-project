@@ -204,7 +204,7 @@ st.markdown("""
 st.markdown("""
 <div class="card" style="margin-bottom:24px; border-left:5px solid #2980B9;">
     <h4 style="color:#2980B9!important; margin:0 0 8px 0;">
-        📖 What Is SARIMA Forecasting?
+         What Is SARIMA Forecasting?
     </h4>
     <p style="color:#333333!important; margin:0; font-size:0.92rem; line-height:1.7;">
         SARIMA stands for Seasonal Autoregressive Integrated Moving Average.
@@ -228,11 +228,11 @@ with st.sidebar:
     )
     show_ci = st.checkbox("Show 95% Confidence Interval", value=True)
     st.markdown("---")
-    st.markdown("**💡 What the confidence interval means:**")
+    st.markdown("** What the confidence interval means:**")
     st.markdown("The shaded band shows the range of likely outcomes. It widens the further into the future we go — uncertainty naturally increases over time.")
 
 # Forecast KPIs
-st.markdown("### 🔮 2027 Home Value Forecasts")
+st.markdown("###  2027 Home Value Forecasts")
 st.markdown("""
 <p class="section-desc">
 Projected home values for December 2027 based on SARIMA models
@@ -277,7 +277,7 @@ for col, city in zip(cols, list(CITY_COLORS.keys())):
 st.markdown("---")
 
 # Individual city forecast
-st.markdown(f"### 📊 Detailed Forecast — {selected_city.split(',')[0]}")
+st.markdown(f"###  Detailed Forecast — {selected_city.split(',')[0]}")
 st.markdown("""
 <p class="section-desc">
 The solid line shows historical home values (2015–2024).
@@ -346,7 +346,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown("---")
 
 # All cities combined
-st.markdown("### 📊 All Cities — Combined Forecast (2015–2027)")
+st.markdown("### All Cities — Combined Forecast (2015–2027)")
 st.markdown('<p class="section-desc">All 5 cities on one chart — solid lines for historical data, dashed for forecasts. The widening gap between LA and the other cities is the most striking pattern.</p>', unsafe_allow_html=True)
 
 fig2 = go.Figure()
@@ -393,7 +393,7 @@ st.plotly_chart(fig2, use_container_width=True)
 st.markdown("---")
 
 # Model summary
-st.markdown("### 🤖 ARIMA Model Parameters")
+st.markdown("###  ARIMA Model Parameters")
 st.markdown("""
 <p class="section-desc">
 The parameters (p, d, q) were automatically selected for each city
@@ -408,7 +408,7 @@ st.dataframe(model_summary, use_container_width=True, hide_index=True)
 st.markdown("---")
 
 # Findings
-st.markdown("### 💡 Key Forecasting Findings")
+st.markdown("###  Key Forecasting Findings")
 ts_findings = [
     ("#E74C3C", "🔴 Los Angeles Is Approaching $1 Million",
      "The SARIMA forecast projects LA home values will approach $1 million by December 2027. At that price point, a household would need an annual income of roughly $200,000 just to meet the standard mortgage affordability guidelines. The median US household income is $83,730."),

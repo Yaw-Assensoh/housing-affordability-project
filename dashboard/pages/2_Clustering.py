@@ -192,7 +192,7 @@ st.markdown("""
             border: 1px solid #E0E0E0;'>
     <p style='color:#1A1A2E!important; font-size:1.8rem; margin:0;
               font-weight:700; line-height:1.2;'>
-        🔵 K-Means Clustering
+         K-Means Clustering
     </p>
     <p style='color:#4A4A5A!important; font-size:0.95rem;
               margin:10px 0 0 0; line-height:1.5;'>
@@ -208,7 +208,7 @@ st.markdown("""
 st.markdown("""
 <div class="card" style="margin-bottom:24px; border-left:5px solid #2980B9;">
     <h4 style="color:#2980B9!important; margin:0 0 8px 0;">
-        📖 What Is K-Means Clustering?
+         What Is K-Means Clustering?
     </h4>
     <p style="color:#333333!important; margin:0; font-size:0.92rem; line-height:1.7;">
         K-Means is an unsupervised machine learning algorithm that groups
@@ -223,7 +223,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Cluster cards
-st.markdown("### 🏷️ The Three Market Segments")
+st.markdown("###  The Three Market Segments")
 st.markdown('<p class="section-desc">K-Means identified 3 distinct groups. Each group shares similar characteristics across all 9 housing metrics — price level, rent, growth rate, and affordability stress.</p>', unsafe_allow_html=True)
 
 c1, c2, c3 = st.columns(3)
@@ -272,7 +272,7 @@ for col, label, emoji, desc in zip(
 st.markdown("---")
 
 # Scatter
-st.markdown("### 📊 Cluster Scatter — Affordability vs Home Value")
+st.markdown("### Cluster Scatter — Affordability vs Home Value")
 st.markdown("""
 <p class="section-desc">
 Each dot is a city. The further right on the x-axis, the more
@@ -320,7 +320,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown("---")
 
 # Radar chart
-st.markdown("### 🕸️ Radar Chart — Full Feature Comparison")
+st.markdown("###  Radar Chart — Full Feature Comparison")
 st.markdown("""
 <p class="section-desc">
 Each axis of this radar chart represents one housing metric,
@@ -370,7 +370,7 @@ st.plotly_chart(fig2, use_container_width=True)
 st.markdown("---")
 
 # Feature bar
-st.markdown("### 📊 City-by-City Feature Comparison")
+st.markdown("###  City-by-City Feature Comparison")
 st.markdown('<p class="section-desc">Select any metric to compare all 5 cities directly. Color shows which cluster each city belongs to.</p>', unsafe_allow_html=True)
 
 feat = st.selectbox(
@@ -406,7 +406,7 @@ st.plotly_chart(fig3, use_container_width=True)
 st.markdown("---")
 
 # Findings
-st.markdown("### 💡 Key Clustering Findings")
+st.markdown("### Key Clustering Findings")
 cluster_findings = [
     ("#27AE60", "🟢 Houston & Chicago — The Affordable Cluster",
      "These two cities formed a clear cluster throughout the analysis. Both stayed below the 1.0 threshold for the entire period. Their radar chart footprints are the smallest of all cities — they score low on every stress metric. This is not a coincidence: both cities have relatively permissive zoning laws and more available land than coastal metros."),
