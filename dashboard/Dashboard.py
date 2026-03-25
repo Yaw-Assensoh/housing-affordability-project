@@ -256,7 +256,7 @@ st.markdown("""
 
 CITY_COLORS = {
     'Chicago, IL':     '#28A745',
-    'Houston, TX':     '#B84FD8',
+    'Houston, TX':     '#9B59B6',
     'Los Angeles, CA': '#FF6B35',
     'Miami, FL':       '#FF3860',
     'New York, NY':    '#2D87F0',
@@ -305,7 +305,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown('<p style="color:#888888!important; font-size:0.75rem;">📊 Data Sources:<br>Zillow Research & FRED</p>', unsafe_allow_html=True)
     st.markdown("---")
-    st.markdown('<p style="color:#888888!important; font-size:0.75rem;">📁 <b>Navigation:</b><br>Use the tabs above to explore:<br>📊 EDA · 🔵 Clustering · 📈 Time Series<br>📐 Regression · 🗺️ Geospatial</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#888888!important; font-size:0.75rem;">📁 <b>Navigation:</b><br>Use the tabs above to explore:<br> EDA ·  Clustering ·  Time Series<br> Regression ·  Geospatial</p>', unsafe_allow_html=True)
 
 # ── HEADER (First) ────────────────────────────────────────────
 st.markdown("""
@@ -350,7 +350,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── EXECUTIVE SUMMARY SECTION ─────────────────────────────────
-st.markdown("## 📋 Executive Summary")
+st.markdown("##  Executive Summary")
 
 # Get latest data for summary
 latest = annual_summary[annual_summary['year'] == 2024]
@@ -402,14 +402,14 @@ with col3:
 st.markdown("---")
 
 # ── KEY TAKEAWAYS SECTION ────────────────────────────────────
-st.markdown("## 💡 Key Takeaways")
+st.markdown("##  Key Takeaways")
 
 takeaways = st.columns(4)
 
 with takeaways[0]:
     st.markdown("""
     <div style="text-align:center; padding:15px; background:#F8F9FA; border-radius:10px;">
-        <div style="font-size:2rem;">📈</div>
+        <div style="font-size:2rem;"></div>
         <div style="font-size:1.3rem; font-weight:800; color:#2D87F0;">+$400K</div>
         <div style="font-size:0.85rem;">LA home values grew $400K while incomes grew only $11K</div>
     </div>
@@ -418,7 +418,7 @@ with takeaways[0]:
 with takeaways[1]:
     st.markdown("""
     <div style="text-align:center; padding:15px; background:#F8F9FA; border-radius:10px;">
-        <div style="font-size:2rem;">🎯</div>
+        <div style="font-size:2rem;"></div>
         <div style="font-size:1.3rem; font-weight:800; color:#2D87F0;">3 Clusters</div>
         <div style="font-size:0.85rem;">K-Means confirmed 3 distinct market segments matching SQL risk classifications</div>
     </div>
@@ -427,7 +427,7 @@ with takeaways[1]:
 with takeaways[2]:
     st.markdown("""
     <div style="text-align:center; padding:15px; background:#F8F9FA; border-radius:10px;">
-        <div style="font-size:2rem;">🔮</div>
+        <div style="font-size:2rem;"></div>
         <div style="font-size:1.3rem; font-weight:800; color:#2D87F0;">$990K</div>
         <div style="font-size:0.85rem;">LA home values projected to approach $1M by 2027</div>
     </div>
@@ -445,7 +445,7 @@ with takeaways[3]:
 st.markdown("---")
 
 # ── KPI Cards ─────────────────────────────────────────────────
-st.markdown("### 📊 2024 Market Snapshot")
+st.markdown("### 2024 Market Snapshot")
 st.markdown('<p style="color:#555555; font-size:0.92rem; margin-bottom:15px;">The affordability index measures home price relative to income. A score of 1.0 is the threshold — anything above means housing costs more than a household earning the median income can comfortably afford.</p>', unsafe_allow_html=True)
 
 city_order = [

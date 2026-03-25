@@ -242,16 +242,18 @@ These are directional forecasts — not guarantees.
 </p>
 """, unsafe_allow_html=True)
 
+# Create KPI cards for each city
 cols = st.columns(5)
 for col, city in zip(cols, list(CITY_COLORS.keys())):
     city_fc   = forecasts[forecasts['city'] == city]
     city_hist = cities_long[cities_long['city'] == city]
     if len(city_fc) == 0:
         continue
-    current = float(city_hist['home_value'].iloc[-1])
-    fc_2027 = float(city_fc['forecast'].iloc[-1])
-    change  = ((fc_2027 - current) / current) * 100
-    color   = CITY_COLORS[city]
+    current    = float(city_hist['home_value'].iloc[-1])
+    fc_2027    = float(city_fc['forecast'].iloc[-1])
+    change     = ((fc_2027 - current) / current) * 100
+    color      = CITY_COLORS[city]
+    chg_color  = '#DC3545' if change > 15 else '#E67E22' if change > 5 else '#27AE60'
     with col:
         st.markdown(f"""
         <div class="card" style="border-top:5px solid {color}; text-align:center;">
@@ -265,7 +267,7 @@ for col, city in zip(cols, list(CITY_COLORS.keys())):
                 ${fc_2027/1000:.0f}k
             </h3>
             <p style="margin:0; font-size:0.82rem;
-                      color={'#DC3545' if change > 15 else '#E67E22' if change > 5 else '#27AE60'}!important;
+                      color:{chg_color}!important;
                       font-weight:600;">
                 {change:+.1f}% vs 2024
             </p>
