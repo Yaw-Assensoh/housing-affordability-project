@@ -436,7 +436,7 @@ with takeaways[2]:
 with takeaways[3]:
     st.markdown("""
     <div style="text-align:center; padding:15px; background:#F8F9FA; border-radius:10px;">
-        <div style="font-size:2rem;">🏗️</div>
+        <div style="font-size:2rem;"></div>
         <div style="font-size:1.3rem; font-weight:800; color:#2D87F0;">Supply</div>
         <div style="font-size:0.85rem;">Regression confirms: you cannot solve a supply problem with demand-side subsidies</div>
     </div>
@@ -580,7 +580,8 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown("---")
 
 # ── Project Structure ─────────────────────────────────────────
-st.markdown("### 📁 Project Structure")
+st.markdown("### 📁" \
+" Project Structure")
 st.markdown('<p style="color:#555555; font-size:0.92rem; margin-bottom:20px;">This project is structured in 3 phases, each using a different tool and analytical method to examine the housing affordability crisis from a different angle.</p>', unsafe_allow_html=True)
 
 c1, c2, c3 = st.columns(3)
